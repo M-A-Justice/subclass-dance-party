@@ -12,11 +12,26 @@ body {
 body, a:link, a:visited, a:active  {
   color: lightblue;
 }
-.title, .addDancerButton {
-  /* padding:5px 12px;
-  float:right; */
+.title {
   font-size: 16px;
 }
+.addDancerButton {
+  font-size: 18px;
+  padding: 6px 10px;
+  margin: 4px;
+  color: rgb(255, 255, 255);
+  border: 2px solid gold;
+  transition: all 0.5s ease-in;
+  background-image: url(images/gold.jpg);
+  border-color: goldenrod;
+  border-radius: 10px;
+  text-shadow: 2px 2px 4px darkred;
+}
+.addDancerButton:hover {
+  border-color: rgb(104, 90, 10);
+  color: ;
+}
+
 .topbar {
   display: flex;
   justify-content: center;
@@ -27,15 +42,6 @@ body, a:link, a:visited, a:active  {
   flex-direction: row-reverse;
   justify-content: center;
   margin-top: 25px;
-}
-/* .title {
-  background-color: #777;
-} */
-.addDancerButton {
-  background-image: url(images/gold.jpg);
-  border-color: goldenrod;
-  border-radius: 10px;
-  color: white;
 }
 .dance-hall {
   height: calc(100vh - 200px);
@@ -63,6 +69,7 @@ body, a:link, a:visited, a:active  {
   margin-left: -60px;
   background-size: cover;
   background-position: center;
+  transition: all 0.5s ease-out;
   /* background-image: url(images/giphy.gif); */
 }
 
@@ -78,9 +85,17 @@ body, a:link, a:visited, a:active  {
   /* background-image: url(images/giphydancer.gif); */
 }
 
+
+/* Animations */
+
 @keyframes pump {
   0% { transform: scale(1); }
   20% { transform: scale(1.5); }
   80% { transform: scale(1); }
   100% { transform: scale(1); }
+}
+
+@keyframes rotate {
+  0% { transform: rotateZ(180deg) rotateY(0deg); }
+  100% { transform: rotateZ(180deg)  rotateY(360deg); }
 }
