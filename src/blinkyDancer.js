@@ -1,4 +1,4 @@
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
+var makeBlinkyDancer = function(top, left, timeBetweenSteps, addClass) {
   makeDancer.call(this, ...arguments);
 };
 

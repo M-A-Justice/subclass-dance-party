@@ -63,17 +63,24 @@ body, a:link, a:visited, a:active  {
   margin-left: -60px;
   background-size: cover;
   background-position: center;
-  background-image: url(https://media.giphy.com/media/3Z3GtaRZzwbx6/giphy.gif);
+  /* background-image: url(images/giphy.gif); */
+}
 
+.dancer--line {
+  /* background-image: url(images/giphy.gif); */
+  /* background-image: url(images/lineDancer.gif); */
+}
+
+.dancer--blinky {
   animation-name: pump;
   animation-duration: 1s;
   animation-iteration-count: infinite;
-
+  /* background-image: url(images/giphydancer.gif); */
 }
 
 @keyframes pump {
   0% { transform: scale(1); }
-  20% { transform: scale(1.15); }
+  20% { transform: scale(1.5); }
   80% { transform: scale(1); }
   100% { transform: scale(1); }
 }

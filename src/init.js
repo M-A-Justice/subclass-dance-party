@@ -5,7 +5,8 @@ $(document).ready(function() {
     var dancer = new makeDancer(
       $('.dance-space').height() * Math.random(),
       $('.dance-space').width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 1000,
+      'dancer--regular'
     );
     $('.dance-space').append(dancer.$node);
   });
@@ -15,7 +16,8 @@ $(document).ready(function() {
     var dancer = new makeBlinkyDancer(
       $('.dance-space').height() * Math.random(),
       $('.dance-space').width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 1000,
+      'dancer--blinky'
     );
     $('.dance-space').append(dancer.$node);
   });
@@ -23,12 +25,13 @@ $(document).ready(function() {
 
   $(document).on('click', '#ButtonLineDancer', function(event) {
     $('span').remove();
-    var count = 20;
+    var count = 100;
     while (count > 0) {
       var dancer = new makeLineDancer(
         $('.dance-floor').height() * Math.random(),
         $('.dance-floor').width() * Math.random(),
-        Math.random() * 1000
+        Math.random() * 1000,
+        'dancer--line'
       );
       $('.dance-floor').append(dancer.$node);
       count--;
@@ -36,7 +39,7 @@ $(document).ready(function() {
   });
 
   $(document).on('click', '#ClearDancer', function(event) {
-    $('span').remove();
+    $('.dancer').remove();
   });
 
 });
