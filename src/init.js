@@ -25,7 +25,7 @@ $(document).ready(function() {
 
   $(document).on('click', '#ButtonLineDancer', function(event) {
     $('span').remove();
-    var count = 100;
+    var count = 30;
     while (count > 0) {
       var dancer = new makeLineDancer(
         $('.dance-floor').height() * Math.random(),
@@ -40,6 +40,26 @@ $(document).ready(function() {
 
   $(document).on('click', '#ClearDancer', function(event) {
     $('.dancer').remove();
+  });
+
+  $(document).on('mouseenter', '.dancer', function(event) {
+    var hoverAnimation = {
+      'transform': 'rotateZ(180deg)',
+      'animation-name': 'rotate',
+      'animation-duration': '1s',
+      'animation-iteration-count': 'infinite'
+    };
+    $(this).css(hoverAnimation);
+  });
+
+  $(document).on('mouseleave', '.dancer', function(event) {
+    var hoverAnimation = {
+      'transform': 'rotateZ(0deg)',
+      'animation-name': '',
+      'animation-duration': '',
+      'animation-iteration-count': 'infinite'
+    };
+    $(this).css(hoverAnimation);
   });
 
 });
