@@ -28,12 +28,13 @@ $(document).ready(function() {
     var count = 30;
     while (count > 0) {
       var dancer = new makeLineDancer(
-        $('.dance-floor').height() * Math.random(),
-        $('.dance-floor').width() * Math.random(),
+        50,
+        ($('.dance-floor').width() / 30) * count ,
         Math.random() * 1000,
         'dancer--line'
       );
       $('.dance-floor').append(dancer.$node);
+
       count--;
     }
   });

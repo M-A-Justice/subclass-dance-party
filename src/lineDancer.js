@@ -1,6 +1,4 @@
 var makeLineDancer = function(top, left, timeBetweenSteps, addClass) {
-  // left = 50;
-  top = 50;
   makeDancer.call(this, top, left, timeBetweenSteps, addClass);
 };
 
