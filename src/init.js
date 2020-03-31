@@ -1,32 +1,43 @@
 $(document).ready(function() {
   window.dancers = [];
-  $(document).on('click', '.addDancerButton', function(event) {
-    /* This function sets up the click handlers for the create-dancer
-     * buttons on dancefloor.html. You should only need to make one small change to it.
-     * As long as the "data-dancer-maker-function-name" attribute of a
-     * class="addDancerButton" DOM node matches one of the names of the
-     * maker functions available in the global scope, clicking that node
-     * will call the function to make the dancer.
-     */
 
-    /* dancerMakerFunctionName is a string which must match
-     * one of the dancer maker functions available in global scope.
-     * A new object of the given type will be created and added
-     * to the stage.
-     */
-    var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
-
-    // get the maker function for the kind of dancer we're supposed to make
-    var dancerMakerFunction = window[dancerMakerFunctionName];
-
-    // make a dancer with a random position
-
-    var dancer = new dancerMakerFunction(
-      $('body').height() * Math.random(),
-      $('body').width() * Math.random(),
+  $(document).on('click', '#ButtonDancer', function(event) {
+    var dancer = new makeDancer(
+      $('.dance-space').height() * Math.random(),
+      $('.dance-space').width() * Math.random(),
       Math.random() * 1000
     );
-    $('body').append(dancer.$node);
+    $('.dance-space').append(dancer.$node);
   });
+
+
+  $(document).on('click', '#ButtonBlikyDancer', function(event) {
+    var dancer = new makeBlinkyDancer(
+      $('.dance-space').height() * Math.random(),
+      $('.dance-space').width() * Math.random(),
+      Math.random() * 1000
+    );
+    $('.dance-space').append(dancer.$node);
+  });
+
+
+  $(document).on('click', '#ButtonLineDancer', function(event) {
+    $('span').remove();
+    var count = 20;
+    while (count > 0) {
+      var dancer = new makeLineDancer(
+        $('.dance-floor').height() * Math.random(),
+        $('.dance-floor').width() * Math.random(),
+        Math.random() * 1000
+      );
+      $('.dance-floor').append(dancer.$node);
+      count--;
+    }
+  });
+
+  $(document).on('click', '#ClearDancer', function(event) {
+    $('span').remove();
+  });
+
 });
 

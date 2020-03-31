@@ -1,31 +1,66 @@
-body, html{
+body, html {
   height:100%;
 }
-body{
+body {
+  background-image: url(images/disco.jpg);
+  background-size: cover;
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  overflow: hidden;
 }
-body, a:link, a:visited, a:active{
+body, a:link, a:visited, a:active  {
   color: lightblue;
 }
-.title, .addDancerButton{
-  padding:5px 12px;
-  float:right;
+.title, .addDancerButton {
+  /* padding:5px 12px;
+  float:right; */
+  font-size: 16px;
 }
-.topbar{
-  height:32px;
-  background-color: #555;
+.topbar {
+  display: flex;
+  justify-content: center;
+  background-color: brown;
 }
-.title{
+.navbar {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-top: 25px;
+}
+/* .title {
   background-color: #777;
+} */
+.addDancerButton {
+  background-image: url(images/gold.jpg);
+  border-color: goldenrod;
+  border-radius: 10px;
+  color: white;
 }
-.dancer{
+.dance-hall {
+  height: calc(100vh - 200px);
+  margin: 80px 180px;
+}
+.dance-space {
+  position: relative;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.dance-floor {
+  position: relative;
+  height: 25%;
+}
+
+.dancer {
   /* border:10px solid red;
   border-radius:10px; */
   position:absolute;
   width: 120px;
   height: 160px;
+  margin-top: -80px;
+  margin-left: -60px;
   background-size: cover;
   background-position: center;
   background-image: url(https://media.giphy.com/media/3Z3GtaRZzwbx6/giphy.gif);
