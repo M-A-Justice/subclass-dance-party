@@ -22,7 +22,8 @@ makeDancer.prototype.setPosition = function(top, left) {
   // Use css top and left properties to position our <span> tag
   // where it belongs on the page. See http://api.jquery.com/css/
   //
-  var random = Math.floor(Math.random() * (4 - 1) + 1);
+  var max = 9;
+  var random = Math.floor(Math.random() * (max - 1) + 1);
   var styleSettings = {
     top: top,
     left: left,
