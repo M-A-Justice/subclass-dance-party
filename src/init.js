@@ -12,7 +12,7 @@ $(document).ready(function() {
   });
 
 
-  $(document).on('click', '#ButtonBlikyDancer', function(event) {
+  $(document).on('click', '#ButtonBlinkyDancer', function(event) {
     var dancer = new makeBlinkyDancer(
       $('.dance-space').height() * Math.random(),
       $('.dance-space').width() * Math.random(),
